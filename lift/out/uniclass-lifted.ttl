@@ -1,0 +1,164 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix uniclass: <https://w3id.org/tesseract/construction-crosswalks/uniclass-lifted#> .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-lifted> a owl:Ontology ;
+    rdfs:label "Uniclass 2015 codes used by these crosswalks, lifted" ;
+    rdfs:comment "Minimal SKOS/OWL rendering of the Uniclass 2015 codes referenced by the crosswalks in this repository, verified against uniclass.thenbs.com. Lifted by Tesseract Academy; not a product of NBS. Titles are NBS's; everything else is interpretation." .
+
+uniclass:Ac a owl:Class ;
+    rdfs:label "Activities" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ac> ;
+    skos:notation "Ac" .
+
+uniclass:Co_25_10_32 a owl:Class ;
+    rdfs:label "Further education colleges" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/co_25_10_32> ;
+    skos:broader uniclass:Co ;
+    skos:notation "Co_25_10_32" .
+
+uniclass:EF_20_05_30 a owl:Class ;
+    rdfs:label "Foundations" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef_20_05_30> ;
+    skos:broader uniclass:EF ;
+    skos:notation "EF_20_05_30" .
+
+uniclass:EF_20_10_30 a owl:Class ;
+    rdfs:label "Framed structures" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef_20_10> ;
+    skos:broader uniclass:EF ;
+    skos:notation "EF_20_10_30" .
+
+uniclass:EF_25_10 a owl:Class ;
+    rdfs:label "Walls" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef_25_10> ;
+    skos:broader uniclass:EF ;
+    skos:notation "EF_25_10" .
+
+uniclass:EF_25_30_25 a owl:Class ;
+    rdfs:label "Doors" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef_25_30_25> ;
+    skos:broader uniclass:EF ;
+    skos:notation "EF_25_30_25" .
+
+uniclass:EF_25_30_97 a owl:Class ;
+    rdfs:label "Windows" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef_25_30_97> ;
+    skos:broader uniclass:EF ;
+    skos:notation "EF_25_30_97" .
+
+uniclass:EF_30_10 a owl:Class ;
+    rdfs:label "Roofs" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef_30_10> ;
+    skos:broader uniclass:EF ;
+    skos:notation "EF_30_10" .
+
+uniclass:EF_30_20 a owl:Class ;
+    rdfs:label "Floors" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef_30_20> ;
+    skos:broader uniclass:EF ;
+    skos:notation "EF_30_20" .
+
+uniclass:EF_30_25_12 a owl:Class ;
+    rdfs:label "Ceilings" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef_30_25> ;
+    skos:broader uniclass:EF ;
+    skos:notation "EF_30_25_12" .
+
+uniclass:EF_30_30 a owl:Class ;
+    rdfs:label "Decks" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef_30_30> ;
+    skos:broader uniclass:EF ;
+    skos:notation "EF_30_30" .
+
+uniclass:EF_35_10 a owl:Class ;
+    rdfs:label "Stairs" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef_35_10> ;
+    skos:broader uniclass:EF ;
+    skos:notation "EF_35_10" .
+
+uniclass:EF_35_20 a owl:Class ;
+    rdfs:label "Ramps" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef_35_20> ;
+    skos:broader uniclass:EF ;
+    skos:notation "EF_35_20" .
+
+uniclass:En_20_15 a owl:Class ;
+    rdfs:label "Administrative office entities" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/en_20_15> ;
+    skos:broader uniclass:En ;
+    skos:notation "En_20_15" .
+
+uniclass:Pr a owl:Class ;
+    rdfs:label "Products" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/pr> ;
+    skos:notation "Pr" .
+
+uniclass:SL_20_15_27 a owl:Class ;
+    rdfs:label "Enclosed offices" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/sl_20_15_27> ;
+    skos:broader uniclass:SL ;
+    skos:notation "SL_20_15_27" .
+
+uniclass:Ss_20_05_65 a owl:Class ;
+    rdfs:label "Piling systems" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ss_20_05_65> ;
+    skos:broader uniclass:Ss ;
+    skos:notation "Ss_20_05_65" .
+
+uniclass:Ss_20_10 a owl:Class ;
+    rdfs:label "Structural frame systems" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ss_20_10> ;
+    skos:broader uniclass:Ss ;
+    skos:notation "Ss_20_10" .
+
+uniclass:Ss_25 a owl:Class ;
+    rdfs:label "Wall and barrier systems" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ss_25> ;
+    skos:broader uniclass:Ss ;
+    skos:notation "Ss_25" .
+
+uniclass:Ss_25_30 a owl:Class ;
+    rdfs:label "Door and window systems" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ss_25_30> ;
+    skos:broader uniclass:Ss ;
+    skos:notation "Ss_25_30" .
+
+uniclass:Ss_30 a owl:Class ;
+    rdfs:label "Roof, floor and paving systems" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ss_30> ;
+    skos:broader uniclass:Ss ;
+    skos:notation "Ss_30" .
+
+uniclass:Ss_30_25 a owl:Class ;
+    rdfs:label "Ceiling and soffit systems" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ss_30_25> ;
+    skos:broader uniclass:Ss ;
+    skos:notation "Ss_30_25" .
+
+uniclass:Co a owl:Class ;
+    rdfs:label "Complexes" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/co> ;
+    skos:notation "Co" .
+
+uniclass:En a owl:Class ;
+    rdfs:label "Entities" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/en> ;
+    skos:notation "En" .
+
+uniclass:SL a owl:Class ;
+    rdfs:label "Spaces/ locations" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/sl> ;
+    skos:notation "SL" .
+
+uniclass:Ss a owl:Class ;
+    rdfs:label "Systems" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ss> ;
+    skos:notation "Ss" .
+
+uniclass:EF a owl:Class ;
+    rdfs:label "Elements/ functions" ;
+    rdfs:seeAlso <https://uniclass.thenbs.com/taxon/ef> ;
+    skos:notation "EF" .
+

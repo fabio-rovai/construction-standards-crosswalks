@@ -1,0 +1,202 @@
+{
+  "tables": [
+    {
+      "code": "Co",
+      "title": "Complexes",
+      "source_url": "https://uniclass.thenbs.com/taxon/co"
+    },
+    {
+      "code": "En",
+      "title": "Entities",
+      "source_url": "https://uniclass.thenbs.com/taxon/en"
+    },
+    {
+      "code": "SL",
+      "title": "Spaces/ locations",
+      "source_url": "https://uniclass.thenbs.com/taxon/sl"
+    },
+    {
+      "code": "EF",
+      "title": "Elements/ functions",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef"
+    },
+    {
+      "code": "Ss",
+      "title": "Systems",
+      "source_url": "https://uniclass.thenbs.com/taxon/ss"
+    },
+    {
+      "code": "Pr",
+      "title": "Products",
+      "source_url": "https://uniclass.thenbs.com/taxon/pr"
+    },
+    {
+      "code": "Ac",
+      "title": "Activities",
+      "source_url": "https://uniclass.thenbs.com/taxon/ac"
+    }
+  ],
+  "codes": [
+    {
+      "concept": "walls-element",
+      "code": "EF_25_10",
+      "title": "Walls",
+      "table": "EF",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef_25_10",
+      "verbatim": "EF_25_10 | Walls"
+    },
+    {
+      "concept": "roofs-element",
+      "code": "EF_30_10",
+      "title": "Roofs",
+      "table": "EF",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef_30_10",
+      "verbatim": "EF_30_10 | Roofs"
+    },
+    {
+      "concept": "floors-element",
+      "code": "EF_30_20",
+      "title": "Floors",
+      "table": "EF",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef_30_20",
+      "verbatim": "EF_30_20 | Floors"
+    },
+    {
+      "concept": "decking-element",
+      "code": "EF_30_30",
+      "title": "Decks",
+      "table": "EF",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef_30_30",
+      "verbatim": "EF_30_30 | Decks"
+    },
+    {
+      "concept": "doors-element",
+      "code": "EF_25_30_25",
+      "title": "Doors",
+      "table": "EF",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef_25_30_25",
+      "verbatim": "EF_25_30_25 | Doors"
+    },
+    {
+      "concept": "windows-element",
+      "code": "EF_25_30_97",
+      "title": "Windows",
+      "table": "EF",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef_25_30_97",
+      "verbatim": "EF_25_30_97 | Windows"
+    },
+    {
+      "concept": "stairs-element",
+      "code": "EF_35_10",
+      "title": "Stairs",
+      "table": "EF",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef_35_10",
+      "verbatim": "EF_35_10 | Stairs"
+    },
+    {
+      "concept": "ramps-element",
+      "code": "EF_35_20",
+      "title": "Ramps",
+      "table": "EF",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef_35_20",
+      "verbatim": "EF_35_20 | Ramps"
+    },
+    {
+      "concept": "foundations-element",
+      "code": "EF_20_05_30",
+      "title": "Foundations",
+      "table": "EF",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef_20_05_30",
+      "verbatim": "EF_20_05_30 | Foundations"
+    },
+    {
+      "concept": "structural-frames-element",
+      "code": "EF_20_10_30",
+      "title": "Framed structures",
+      "table": "EF",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef_20_10",
+      "verbatim": "EF_20_10_30 | Framed structures"
+    },
+    {
+      "concept": "ceilings-element",
+      "code": "EF_30_25_12",
+      "title": "Ceilings",
+      "table": "EF",
+      "source_url": "https://uniclass.thenbs.com/taxon/ef_30_25",
+      "verbatim": "EF_30_25_12 | Ceilings"
+    },
+    {
+      "concept": "wall-systems",
+      "code": "Ss_25",
+      "title": "Wall and barrier systems",
+      "table": "Ss",
+      "source_url": "https://uniclass.thenbs.com/taxon/ss_25",
+      "verbatim": "Ss_25 | Wall and barrier systems"
+    },
+    {
+      "concept": "roof-floor-paving-systems",
+      "code": "Ss_30",
+      "title": "Roof, floor and paving systems",
+      "table": "Ss",
+      "source_url": "https://uniclass.thenbs.com/taxon/ss_30",
+      "verbatim": "Ss_30 | Roof, floor and paving systems"
+    },
+    {
+      "concept": "door-window-systems",
+      "code": "Ss_25_30",
+      "title": "Door and window systems",
+      "table": "Ss",
+      "source_url": "https://uniclass.thenbs.com/taxon/ss_25_30",
+      "verbatim": "Ss_25_30 | Door and window systems"
+    },
+    {
+      "concept": "piling-systems",
+      "code": "Ss_20_05_65",
+      "title": "Piling systems",
+      "table": "Ss",
+      "source_url": "https://uniclass.thenbs.com/taxon/ss_20_05_65",
+      "verbatim": "Ss_20_05_65 | Piling systems"
+    },
+    {
+      "concept": "framed-structure-systems",
+      "code": "Ss_20_10",
+      "title": "Structural frame systems",
+      "table": "Ss",
+      "source_url": "https://uniclass.thenbs.com/taxon/ss_20_10",
+      "verbatim": "Ss_20_10 | Structural frame systems"
+    },
+    {
+      "concept": "suspended-ceiling-systems",
+      "code": "Ss_30_25",
+      "title": "Ceiling and soffit systems",
+      "table": "Ss",
+      "source_url": "https://uniclass.thenbs.com/taxon/ss_30_25",
+      "verbatim": "Ss_30_25 | Ceiling and soffit systems"
+    },
+    {
+      "concept": "offices-space-location",
+      "code": "SL_20_15_27",
+      "title": "Enclosed offices",
+      "table": "SL",
+      "source_url": "https://uniclass.thenbs.com/taxon/sl_20_15_27",
+      "verbatim": "SL_20_15_27 | Enclosed offices"
+    },
+    {
+      "concept": "offices-entity",
+      "code": "En_20_15",
+      "title": "Administrative office entities",
+      "table": "En",
+      "source_url": "https://uniclass.thenbs.com/taxon/en_20_15",
+      "verbatim": "En_20_15 | Administrative office entities"
+    },
+    {
+      "concept": "education-complex",
+      "code": "Co_25_10_32",
+      "title": "Further education colleges",
+      "table": "Co",
+      "source_url": "https://uniclass.thenbs.com/taxon/co_25_10_32",
+      "verbatim": "Co_25_10_32 | Further education colleges"
+    }
+  ],
+  "unverified": []
+}

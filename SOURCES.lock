@@ -1,0 +1,6 @@
+# sha256 pins for fetched/verified sources. bot.ttl fetched from https://w3id.org/bot/bot.ttl;
+# ifc4-add2.ttl from the buildingsmart-community/ifcOWL rendering (shared with the companion industrial repo);
+# uniclass-verified.json = codes verified against uniclass.thenbs.com taxon pages, 2026-07-29.
+0f51c7f192d5e694a9c465cbc883448c64790ffabc3c1e8d6530912c45510d73  sources/bot.ttl
+fd544165707090285f93a100ef61113a687d3ba79c64bbf0bba7c9591df5aaf6  sources/ifc4-add2.ttl
+8f38172dc8ba2148d8571fd70608fe05810e1f66690324b7bb657c3c827b7e7e  sources/uniclass-verified.json

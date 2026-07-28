@@ -1,0 +1,30 @@
+{
+  "BOT": {
+    "classes": 7,
+    "declared_disjoint_pairs": 9,
+    "unordered_class_pairs": 21,
+    "provably_disjoint_pairs": 17,
+    "falsifiability_rate_pct": 80.95
+  },
+  "IFC4 ADD2": {
+    "classes": 1286,
+    "declared_disjoint_pairs": 2443,
+    "unordered_class_pairs": 826255,
+    "provably_disjoint_pairs": 94626,
+    "falsifiability_rate_pct": 11.45
+  },
+  "COBie (lifted)": {
+    "classes": 18,
+    "declared_disjoint_pairs": 0,
+    "unordered_class_pairs": 153,
+    "provably_disjoint_pairs": 0,
+    "falsifiability_rate_pct": 0.0
+  },
+  "Uniclass (lifted)": {
+    "classes": 27,
+    "declared_disjoint_pairs": 0,
+    "unordered_class_pairs": 351,
+    "provably_disjoint_pairs": 0,
+    "falsifiability_rate_pct": 0.0
+  }
+}

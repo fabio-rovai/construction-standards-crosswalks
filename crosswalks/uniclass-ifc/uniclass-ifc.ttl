@@ -1,0 +1,349 @@
+@prefix ifc: <http://ifcowl.openbimstandards.org/IFC4_ADD2#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix semapv: <https://w3id.org/semapv/vocab/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sssom: <https://w3id.org/sssom/> .
+@prefix uniclass: <https://w3id.org/tesseract/construction-crosswalks/uniclass-lifted#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/000> a sssom:Mapping ;
+    rdfs:comment "The cleanest element-level row. Residual gap: IFC splits curtain walling into IfcCurtainWall while EF_25_10 classifies the wall function regardless of construction." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.85 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcWall ;
+    sssom:object_label "IfcWall" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id uniclass:EF_25_10 ;
+    sssom:subject_label "Walls" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/001> a sssom:Mapping ;
+    rdfs:comment "Direct at the element level. IfcRoof is frequently a container aggregating slabs and beams; the EF code classifies the whole either way." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.85 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcRoof ;
+    sssom:object_label "IfcRoof" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id uniclass:EF_30_10 ;
+    sssom:subject_label "Roofs" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/002> a sssom:Mapping ;
+    rdfs:comment "Crossed scopes rather than a clean match: IfcSlab is broader (it also serves as roof slab and landing, with a predefined type discriminating) and narrower (a floor element includes build-up beyond the structural slab). Kept at closeMatch because in exchange practice floor elements land as IfcSlab." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.7 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcSlab ;
+    sssom:object_label "IfcSlab" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id uniclass:EF_30_20 ;
+    sssom:subject_label "Floors" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/003> a sssom:Mapping ;
+    rdfs:comment "Decks (including bridge decks) have no dedicated IFC4 class; they are modelled as slabs by convention. Related, not close: IFC4 predates the infrastructure entities that would carry this properly." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.6 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcSlab ;
+    sssom:object_label "IfcSlab" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id uniclass:EF_30_30 ;
+    sssom:subject_label "Decks" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/004> a sssom:Mapping ;
+    rdfs:comment "Direct at the element level: both classify the door as an installed filling of an opening, and neither side splits doorsets from doors at this depth." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.9 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcDoor ;
+    sssom:object_label "IfcDoor" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id uniclass:EF_25_30_25 ;
+    sssom:subject_label "Doors" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/005> a sssom:Mapping ;
+    rdfs:comment "Direct at the element level, same shape as the doors row; IFC's IfcWindow likewise covers the window as installed opening filling." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.9 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcWindow ;
+    sssom:object_label "IfcWindow" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id uniclass:EF_25_30_97 ;
+    sssom:subject_label "Windows" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/006> a sssom:Mapping ;
+    rdfs:comment "Direct at the element level: IfcStair, like the EF code, denotes the whole vertical-circulation element and aggregates flights and landings beneath it." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.9 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcStair ;
+    sssom:object_label "IfcStair" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id uniclass:EF_35_10 ;
+    sssom:subject_label "Stairs" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/007> a sssom:Mapping ;
+    rdfs:comment "Direct at the element level, mirroring the stairs row: IfcRamp aggregates ramp flights exactly as IfcStair aggregates stair flights." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.9 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcRamp ;
+    sssom:object_label "IfcRamp" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id uniclass:EF_35_20 ;
+    sssom:subject_label "Ramps" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/008> a sssom:Mapping ;
+    rdfs:comment "Foundations is the broader function: IfcFooting carries the shallow-foundation case. Read as 'IfcFooting is the narrower concept'." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.8 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcFooting ;
+    sssom:object_label "IfcFooting" ;
+    sssom:predicate_id skos:narrowMatch ;
+    sssom:subject_id uniclass:EF_20_05_30 ;
+    sssom:subject_label "Foundations" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/009> a sssom:Mapping ;
+    rdfs:comment "The deep-foundation case of the row above. IFC splits by construction method what Uniclass unifies by function; neither is wrong, and the crosswalk must carry both rows or silently lose piles." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.8 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcPile ;
+    sssom:object_label "IfcPile" ;
+    sssom:predicate_id skos:narrowMatch ;
+    sssom:subject_id uniclass:EF_20_05_30 ;
+    sssom:subject_label "Foundations" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/010> a sssom:Mapping ;
+    rdfs:comment "IFC4 has no IfcCeiling class at all: ceilings are IfcCovering occurrences discriminated only by a CEILING predefined type. IfcCovering is the broader concept (it also carries claddings, floor coverings and wrappings), so this is a broadMatch with real information loss at the class level." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.8 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcCovering ;
+    sssom:object_label "IfcCovering" ;
+    sssom:predicate_id skos:broadMatch ;
+    sssom:subject_id uniclass:EF_30_25_12 ;
+    sssom:subject_label "Ceilings" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/011> a sssom:Mapping ;
+    rdfs:comment "The stratification mismatch made explicit: Uniclass separates the wall element (EF_25_10) from the wall system (Ss_25), while a single IfcWall occurrence answers for both readings. One IFC class, two Uniclass strata. Any tool that maps IfcWall to exactly one Uniclass table has already made an undeclared modelling decision." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.6 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcWall ;
+    sssom:object_label "IfcWall" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id uniclass:Ss_25 ;
+    sssom:subject_label "Wall and barrier systems" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/012> a sssom:Mapping ;
+    rdfs:comment "System-stratum counterpart of the EF door row; same conflation as Ss_25." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.55 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcDoor ;
+    sssom:object_label "IfcDoor" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id uniclass:Ss_25_30 ;
+    sssom:subject_label "Door and window systems" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/013> a sssom:Mapping ;
+    rdfs:comment "System-stratum counterpart of the EF window row." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.55 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcWindow ;
+    sssom:object_label "IfcWindow" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id uniclass:Ss_25_30 ;
+    sssom:subject_label "Door and window systems" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/014> a sssom:Mapping ;
+    rdfs:comment "System-stratum counterpart of the pile row: a piling system is the assembled set of piles plus caps and works, of which IfcPile occurrences are members." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.65 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcPile ;
+    sssom:object_label "IfcPile" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id uniclass:Ss_20_05_65 ;
+    sssom:subject_label "Piling systems" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/015> a sssom:Mapping ;
+    rdfs:comment "The least losable and least clean row in the set: IFC4 has no frame entity, and an IfcElementAssembly instance can represent an assembled frame. Related only - most exchanged models represent frames as loose beams and columns with no assembly object at all." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.55 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcElementAssembly ;
+    sssom:object_label "IfcElementAssembly" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id uniclass:Ss_20_10 ;
+    sssom:subject_label "Structural frame systems" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/016> a sssom:Mapping ;
+    rdfs:comment "System-stratum counterpart of the floors row, with the same crossed-scope caveats." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.55 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcSlab ;
+    sssom:object_label "IfcSlab" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id uniclass:Ss_30 ;
+    sssom:subject_label "Roof, floor and paving systems" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/017> a sssom:Mapping ;
+    rdfs:comment "System-stratum counterpart of the ceilings row." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.6 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcCovering ;
+    sssom:object_label "IfcCovering" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id uniclass:Ss_30_25 ;
+    sssom:subject_label "Ceiling and soffit systems" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/018> a sssom:Mapping ;
+    rdfs:comment "A space classification code names a kind of IfcSpace: the broader concept on the IFC side is the class, the Uniclass code is the discriminator. In a live model this row is realised as an IfcClassificationReference on the space, not as a class axiom - which is exactly why classification mappings survive every schema validator while carrying no checkable semantics." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.8 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcSpace ;
+    sssom:object_label "IfcSpace" ;
+    sssom:predicate_id skos:broadMatch ;
+    sssom:subject_id uniclass:SL_20_15_27 ;
+    sssom:subject_label "Enclosed offices" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/019> a sssom:Mapping ;
+    rdfs:comment "An entity code names a kind of IfcBuilding. Same classification-not-axiom caveat as the SL row." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.75 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcBuilding ;
+    sssom:object_label "IfcBuilding" ;
+    sssom:predicate_id skos:broadMatch ;
+    sssom:subject_id uniclass:En_20_15 ;
+    sssom:subject_label "Administrative office entities" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/020> a sssom:Mapping ;
+    rdfs:comment "IFC4 has no complex entity; a campus-scale complex is approximated by IfcSite with compositionType COMPLEX, or by site aggregation. The Uniclass Complexes table simply has no first-class IFC4 counterpart, and this row is the closest honest anchor." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.6 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcSite ;
+    sssom:object_label "IfcSite" ;
+    sssom:predicate_id skos:broadMatch ;
+    sssom:subject_id uniclass:Co_25_10_32 ;
+    sssom:subject_label "Further education colleges" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/021> a sssom:Mapping ;
+    rdfs:comment "Table-level: Uniclass Ac classifies activities across the asset life cycle; IfcTask carries the scheduled-work case. Related, not close - Ac also classifies occupancy and operational activities that IFC represents nowhere." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.6 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcTask ;
+    sssom:object_label "IfcTask" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id uniclass:Ac ;
+    sssom:subject_label "Activities" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/022> a sssom:Mapping ;
+    rdfs:comment "Asserted non-mapping, and the canonical part-whole error of construction alignment: a beam is a part of a framed structure, not a kind of one. Tools infer 'frame maps to beam/column' from lexical overlap constantly, and because Uniclass asserts no axioms whatsoever, no reasoner and no SHACL shape will ever reject it. The mereology/taxonomy confusion must be refused by a human, here, in the record." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.9 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcBeam ;
+    sssom:object_label "IfcBeam" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:predicate_modifier "Not" ;
+    sssom:subject_id uniclass:EF_20_10_30 ;
+    sssom:subject_label "Framed structures" .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc/mapping/023> a sssom:Mapping ;
+    rdfs:comment "Asserted non-mapping at table level: Pr classifies products as supplied (the manufacturer's catalogue item); IfcElement is the installed occurrence in a building. The as-supplied/as-installed line is the construction twin of the as-designed/as-built line, and collapsing it makes every delivered pallet a wall. Products crosswalk to IfcElementType and material layers, each with loss, and that mapping is deliberately out of scope until it can be done per product group." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.85 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:object_id ifc:IfcElement ;
+    sssom:object_label "IfcElement" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:predicate_modifier "Not" ;
+    sssom:subject_id uniclass:Pr ;
+    sssom:subject_label "Products" .
+
+uniclass:Ac skos:relatedMatch ifc:IfcTask .
+
+uniclass:Co_25_10_32 skos:broadMatch ifc:IfcSite .
+
+uniclass:EF_25_10 skos:closeMatch ifc:IfcWall .
+
+uniclass:EF_25_30_25 skos:closeMatch ifc:IfcDoor .
+
+uniclass:EF_25_30_97 skos:closeMatch ifc:IfcWindow .
+
+uniclass:EF_30_10 skos:closeMatch ifc:IfcRoof .
+
+uniclass:EF_30_20 skos:closeMatch ifc:IfcSlab .
+
+uniclass:EF_30_25_12 skos:broadMatch ifc:IfcCovering .
+
+uniclass:EF_30_30 skos:relatedMatch ifc:IfcSlab .
+
+uniclass:EF_35_10 skos:closeMatch ifc:IfcStair .
+
+uniclass:EF_35_20 skos:closeMatch ifc:IfcRamp .
+
+uniclass:En_20_15 skos:broadMatch ifc:IfcBuilding .
+
+uniclass:SL_20_15_27 skos:broadMatch ifc:IfcSpace .
+
+uniclass:Ss_20_05_65 skos:relatedMatch ifc:IfcPile .
+
+uniclass:Ss_20_10 skos:relatedMatch ifc:IfcElementAssembly .
+
+uniclass:Ss_25 skos:relatedMatch ifc:IfcWall .
+
+uniclass:Ss_30 skos:relatedMatch ifc:IfcSlab .
+
+uniclass:Ss_30_25 skos:relatedMatch ifc:IfcCovering .
+
+uniclass:EF_20_05_30 skos:narrowMatch ifc:IfcFooting,
+        ifc:IfcPile .
+
+uniclass:Ss_25_30 skos:relatedMatch ifc:IfcDoor,
+        ifc:IfcWindow .
+
+<https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> a sssom:MappingSet ;
+    rdfs:label "Uniclass 2015 (verified codes) to ifcOWL IFC4 ADD2 crosswalk" ;
+    rdfs:comment "Candidate-for-review crosswalk between Uniclass 2015 codes (verified against uniclass.thenbs.com, April 2026 table versions; see lift/uniclass_to_rdf.py) and ifcOWL IFC4 ADD2. Uniclass stratifies the built environment into tables (Complexes > Entities > Spaces > Elements > Systems > Products) while IFC types occurrences, so most correspondences here cross a strata boundary and say so. Rows with predicate_modifier=Not are asserted NON-mappings. SKOS direction per the SKOS Reference: A skos:broadMatch B asserts B is the broader concept; A skos:narrowMatch B asserts B is the narrower concept. Confidence is the curator's, not a computed score." ;
+    sssom:license <https://creativecommons.org/licenses/by/4.0/> ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/uniclass-ifc> ;
+    sssom:mapping_set_version "0.1.0" .
+

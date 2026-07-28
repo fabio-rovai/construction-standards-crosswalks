@@ -1,0 +1,81 @@
+@prefix cobie: <https://w3id.org/tesseract/construction-crosswalks/cobie-lifted#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-lifted> a owl:Ontology ;
+    rdfs:label "COBie 2.4 / BS 1192-4 worksheet model, lifted" ;
+    rdfs:comment "One owl:Class per COBie data worksheet. Lifted by Tesseract Academy for crosswalk purposes; not a product of any standards body. COBie asserts no disjointness and none is invented here." .
+
+cobie:Assembly a owl:Class ;
+    rdfs:label "Assembly" ;
+    skos:definition "An identified aggregation of types or components into a larger whole." .
+
+cobie:Attribute a owl:Class ;
+    rdfs:label "Attribute" ;
+    skos:definition "A named value attached to a row of another sheet." .
+
+cobie:Component a owl:Class ;
+    rdfs:label "Component" ;
+    skos:definition "An individually named, managed occurrence of a Type installed in a space." .
+
+cobie:Connection a owl:Class ;
+    rdfs:label "Connection" ;
+    skos:definition "A logical connection between two components." .
+
+cobie:Contact a owl:Class ;
+    rdfs:label "Contact" ;
+    skos:definition "A person or organisation participating in the exchange, keyed by email address." .
+
+cobie:Coordinate a owl:Class ;
+    rdfs:label "Coordinate" ;
+    skos:definition "A point, line or box locating a floor, space or component." .
+
+cobie:Document a owl:Class ;
+    rdfs:label "Document" ;
+    skos:definition "A reference to an external document applying to a row of another sheet." .
+
+cobie:Facility a owl:Class ;
+    rdfs:label "Facility" ;
+    skos:definition "The facility being handed over: the project, site and building context for every other sheet." .
+
+cobie:Floor a owl:Class ;
+    rdfs:label "Floor" ;
+    skos:definition "A vertical level or sectioning of the facility, including roofs and external levels." .
+
+cobie:Impact a owl:Class ;
+    rdfs:label "Impact" ;
+    skos:definition "A recorded economic, environmental or social impact of the facility or its parts." .
+
+cobie:Issue a owl:Class ;
+    rdfs:label "Issue" ;
+    skos:definition "A recorded issue, risk or clash concerning two rows of other sheets." .
+
+cobie:Job a owl:Class ;
+    rdfs:label "Job" ;
+    skos:definition "A planned task - preventative maintenance, operation or safety procedure - on a type." .
+
+cobie:Resource a owl:Class ;
+    rdfs:label "Resource" ;
+    skos:definition "A material, tool or training resource required by a job." .
+
+cobie:Space a owl:Class ;
+    rdfs:label "Space" ;
+    skos:definition "A location within a floor to which components and functions are assigned." .
+
+cobie:Spare a owl:Class ;
+    rdfs:label "Spare" ;
+    skos:definition "A spare part or consumable associated with a type." .
+
+cobie:System a owl:Class ;
+    rdfs:label "System" ;
+    skos:definition "A named aggregation of components delivering a service, such as a heating circuit." .
+
+cobie:Type a owl:Class ;
+    rdfs:label "Type" ;
+    skos:definition "A specification of a kind of equipment or product, carrying warranty, spare and maintenance data." .
+
+cobie:Zone a owl:Class ;
+    rdfs:label "Zone" ;
+    skos:definition "A named aggregation of spaces sharing a function, such as a fire compartment or department." .
+

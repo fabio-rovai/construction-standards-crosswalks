@@ -1,0 +1,306 @@
+@prefix cobie: <https://w3id.org/tesseract/construction-crosswalks/cobie-lifted#> .
+@prefix ifc: <http://ifcowl.openbimstandards.org/IFC4_ADD2#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix semapv: <https://w3id.org/semapv/vocab/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sssom: <https://w3id.org/sssom/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/000> a sssom:Mapping ;
+    rdfs:comment "The documented COBie anchor: a Contact row is a person-in-role-for-an-organisation, keyed by email. IfcPerson or IfcOrganization alone each lose one half of the pair." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.9 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcPersonAndOrganization ;
+    sssom:object_label "IfcPersonAndOrganization" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Contact ;
+    sssom:subject_label "Contact" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/001> a sssom:Mapping ;
+    rdfs:comment "The weakest 'direct' row in COBie, kept honest by the two related rows below: one Facility row deliberately flattens three IFC entities (project, site, building) into one record. IfcBuilding is the primary carrier of the facility name in the documented mapping." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.7 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcBuilding ;
+    sssom:object_label "IfcBuilding" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Facility ;
+    sssom:subject_label "Facility" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/002> a sssom:Mapping ;
+    rdfs:comment "The project-context slice of the Facility flattening: units, phase and project name come from IfcProject." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.7 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcProject ;
+    sssom:object_label "IfcProject" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id cobie:Facility ;
+    sssom:subject_label "Facility" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/003> a sssom:Mapping ;
+    rdfs:comment "The site slice of the Facility flattening: linear units and site name come from IfcSite." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.7 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcSite ;
+    sssom:object_label "IfcSite" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id cobie:Facility ;
+    sssom:subject_label "Facility" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/004> a sssom:Mapping ;
+    rdfs:comment "Direct, with one edge: COBie files roofs and external levels as Floor rows, which IFC represents as storeys only by convention." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.9 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcBuildingStorey ;
+    sssom:object_label "IfcBuildingStorey" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Floor ;
+    sssom:subject_label "Floor" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/005> a sssom:Mapping ;
+    rdfs:comment "Direct. The COBie Space is the managed-location notion and inherits IfcSpace's room-data semantics." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.9 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcSpace ;
+    sssom:object_label "IfcSpace" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Space ;
+    sssom:subject_label "Space" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/006> a sssom:Mapping ;
+    rdfs:comment "Direct, and the mirror image of the bot-ifc false friend: COBie Zone and IfcZone are both non-spatial aggregations of spaces. The same IFC entity that must NOT be mapped to bot:Zone is exactly right here. Two rows, two crosswalks, opposite verdicts on one label." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.9 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcZone ;
+    sssom:object_label "IfcZone" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Zone ;
+    sssom:subject_label "Zone" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/007> a sssom:Mapping ;
+    rdfs:comment "The catalogue-specification notion. In practice COBie Types are IfcTypeProduct subtypes (equipment, fittings); IfcTypeObject is the documented superclass target." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.85 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcTypeObject ;
+    sssom:object_label "IfcTypeObject" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Type ;
+    sssom:subject_label "Type" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/008> a sssom:Mapping ;
+    rdfs:comment "The installed occurrence. Strictly the MVD admits some non-element products as components; IfcElement covers the maintainable-asset core that COBie exists for." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.85 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcElement ;
+    sssom:object_label "IfcElement" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Component ;
+    sssom:subject_label "Component" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/009> a sssom:Mapping ;
+    rdfs:comment "Direct. IFC4 refines this with IfcDistributionSystem and IfcBuildingSystem subclasses; COBie keeps one flat sheet." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.85 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcSystem ;
+    sssom:object_label "IfcSystem" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:System ;
+    sssom:subject_label "System" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/010> a sssom:Mapping ;
+    rdfs:comment "The documented target is the aggregation relationship, not a thing: a COBie Assembly row reifies an IfcRelAggregates (or nesting) instance. IfcElementAssembly is the related first-class object when the aggregation is itself a product." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.7 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcRelAggregates ;
+    sssom:object_label "IfcRelAggregates" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Assembly ;
+    sssom:subject_label "Assembly" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/011> a sssom:Mapping ;
+    rdfs:comment "The object-side reading of the row above, applicable when the assembly is modelled as a product rather than a relationship." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.6 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcElementAssembly ;
+    sssom:object_label "IfcElementAssembly" ;
+    sssom:predicate_id skos:relatedMatch ;
+    sssom:subject_id cobie:Assembly ;
+    sssom:subject_label "Assembly" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/012> a sssom:Mapping ;
+    rdfs:comment "Direct: both reify a logical connection between two components." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.8 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcRelConnectsElements ;
+    sssom:object_label "IfcRelConnectsElements" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Connection ;
+    sssom:subject_label "Connection" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/013> a sssom:Mapping ;
+    rdfs:comment "The documented target: a spare part is a product-typed construction resource." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.8 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcConstructionProductResource ;
+    sssom:object_label "IfcConstructionProductResource" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Spare ;
+    sssom:subject_label "Spare" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/014> a sssom:Mapping ;
+    rdfs:comment "COBie Resource spans materials, tools and training, which is the IfcConstructionResource family (product, equipment, material, labour subtypes), not any single leaf." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.8 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcConstructionResource ;
+    sssom:object_label "IfcConstructionResource" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Resource ;
+    sssom:subject_label "Resource" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/015> a sssom:Mapping ;
+    rdfs:comment "Maintenance, operation and safety procedures are IfcTask instances in the handover MVD (IfcProcedure carries the step-level detail)." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.85 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcTask ;
+    sssom:object_label "IfcTask" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Job ;
+    sssom:subject_label "Job" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/016> a sssom:Mapping ;
+    rdfs:comment "Direct: a Document row is a named external reference applying to another row, which is IfcDocumentInformation's exact remit, and both sides key on name plus location rather than content." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.9 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcDocumentInformation ;
+    sssom:object_label "IfcDocumentInformation" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Document ;
+    sssom:subject_label "Document" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/017> a sssom:Mapping ;
+    rdfs:comment "A COBie Attribute row is a named single value on another row, which is precisely IfcPropertySingleValue. The broader IfcProperty admits enumerated, bounded and table values that COBie's one-column shape cannot carry." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.85 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcPropertySingleValue ;
+    sssom:object_label "IfcPropertySingleValue" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Attribute ;
+    sssom:subject_label "Attribute" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/018> a sssom:Mapping ;
+    rdfs:comment "The documented but weakest target: BS 1192-4 routes issues through approval records. An Issue row (risk, clash, observation between two rows) and an IfcApproval (a sanctioned decision) overlap without either subsuming the other. Flagged low-confidence deliberately." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.55 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcApproval ;
+    sssom:object_label "IfcApproval" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:subject_id cobie:Issue ;
+    sssom:subject_label "Issue" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/019> a sssom:Mapping ;
+    rdfs:comment "Asserted non-mapping at the entity level: a Coordinate row is a projection of geometry (a point, line or box derived from placement and representation), not an entity. There is no IFC4 class whose instances are COBie coordinates; mapping it to any product or placement class confuses a derived view with a thing. The honest statement is that this sheet crosswalks to a computation over IfcLocalPlacement and representation, not to a class." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.85 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcProduct ;
+    sssom:object_label "IfcProduct" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:predicate_modifier "Not" ;
+    sssom:subject_id cobie:Coordinate ;
+    sssom:subject_label "Coordinate" .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc/mapping/020> a sssom:Mapping ;
+    rdfs:comment "Asserted non-mapping: IFC4 ADD2 has no entity for economic or environmental impact; in practice impacts land in ad-hoc property sets. A property set is a carrier, not a concept, and asserting the mapping would make any property set an impact. The gap is real and belongs in the record." ;
+    prov:wasAttributedTo orcid:0009-0001-7244-794X ;
+    sssom:confidence 0.8 ;
+    sssom:mapping_justification semapv:ManualMappingCuration ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:object_id ifc:IfcPropertySetDefinition ;
+    sssom:object_label "IfcPropertySetDefinition" ;
+    sssom:predicate_id skos:closeMatch ;
+    sssom:predicate_modifier "Not" ;
+    sssom:subject_id cobie:Impact ;
+    sssom:subject_label "Impact" .
+
+cobie:Attribute skos:closeMatch ifc:IfcPropertySingleValue .
+
+cobie:Component skos:closeMatch ifc:IfcElement .
+
+cobie:Connection skos:closeMatch ifc:IfcRelConnectsElements .
+
+cobie:Contact skos:closeMatch ifc:IfcPersonAndOrganization .
+
+cobie:Document skos:closeMatch ifc:IfcDocumentInformation .
+
+cobie:Floor skos:closeMatch ifc:IfcBuildingStorey .
+
+cobie:Issue skos:closeMatch ifc:IfcApproval .
+
+cobie:Job skos:closeMatch ifc:IfcTask .
+
+cobie:Resource skos:closeMatch ifc:IfcConstructionResource .
+
+cobie:Space skos:closeMatch ifc:IfcSpace .
+
+cobie:Spare skos:closeMatch ifc:IfcConstructionProductResource .
+
+cobie:System skos:closeMatch ifc:IfcSystem .
+
+cobie:Type skos:closeMatch ifc:IfcTypeObject .
+
+cobie:Zone skos:closeMatch ifc:IfcZone .
+
+cobie:Assembly skos:closeMatch ifc:IfcRelAggregates ;
+    skos:relatedMatch ifc:IfcElementAssembly .
+
+cobie:Facility skos:closeMatch ifc:IfcBuilding ;
+    skos:relatedMatch ifc:IfcProject,
+        ifc:IfcSite .
+
+<https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> a sssom:MappingSet ;
+    rdfs:label "COBie 2.4 (BS 1192-4) worksheet model to ifcOWL IFC4 ADD2 crosswalk" ;
+    rdfs:comment "Candidate-for-review crosswalk between the COBie worksheet model (lifted; see lift/cobie_to_rdf.py) and ifcOWL IFC4 ADD2. The entity-level skeleton follows the COBie mapping documented in BS 1192-4 and the buildingSMART FM Handover MVD, re-expressed against ifcOWL IRIs; the confidences and the non-mappings are this repository's. Rows with predicate_modifier=Not are asserted NON-mappings. SKOS direction per the SKOS Reference: A skos:narrowMatch B asserts B is the narrower concept. COBie asserts zero disjointness, so no mis-mapping into COBie is reasoner-rejectable; every row here rests on SHACL shape checks and human review only." ;
+    sssom:license <https://creativecommons.org/licenses/by/4.0/> ;
+    sssom:mapping_set_id <https://w3id.org/tesseract/construction-crosswalks/cobie-ifc> ;
+    sssom:mapping_set_version "0.1.0" .
+

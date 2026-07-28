@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use these crosswalks or the falsifiability measurement, please cite this repository."
+title: "Construction standards crosswalks: BOT, IFC4, COBie and Uniclass 2015, with falsifiability metrics"
+authors:
+  - family-names: "Rovai"
+    given-names: "Fabio"
+    orcid: "https://orcid.org/0009-0001-7244-794X"
+    affiliation: "Tesseract Academy (Kampakis and Co Ltd)"
+version: "0.1.0"
+date-released: "2026-07-29"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/fabio-rovai/construction-standards-crosswalks"
+keywords:
+  - IFC
+  - COBie
+  - Uniclass
+  - Building Topology Ontology
+  - crosswalk
+  - ontology alignment
+  - construction
