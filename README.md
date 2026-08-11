@@ -1,5 +1,7 @@
 # Construction standards crosswalks
 
+[![Sponsor](https://img.shields.io/github/sponsors/fabio-rovai?label=Sponsor&logo=GitHub%20Sponsors&logoColor=EA4AAA&color=EA4AAA)](https://github.com/sponsors/fabio-rovai)
+
 **Open, machine-readable crosswalks between the data standards a building
 actually passes through - IFC, COBie, Uniclass 2015 and the W3C Building
 Topology Ontology - and the measurement that shows why most construction data
@@ -99,3 +101,9 @@ against the specific row and bring the counterexample.
 ## License
 
 [CC BY 4.0](LICENSE). Cite via [`CITATION.cff`](CITATION.cff).
+
+---
+
+## Sponsor
+
+If this work is useful to you, you can support its continued development through [GitHub Sponsors](https://github.com/sponsors/fabio-rovai).
